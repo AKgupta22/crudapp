@@ -1,0 +1,42 @@
+{{>header}}
+<title>CRUD||APP||Edit Employee Record</title>
+{{>navbar}}
+
+<div class="container">
+    <h5 class="bgcol text-light text-center p-2 mt-1">Employee Record Edit</h5>
+    <form action='/edit/{{data._id}}' method="post">
+        <div class="mb-2">
+            <label class="form-label">Employee ID</label>
+            <input required type="number" name="id" class="form-control" id="id" placeholder="1003.." disabled
+                value='{{data.id}}'>
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Employee Name</label>
+            <input required type="text" class="form-control" id="name" name="name" placeholder="Full Name"
+                value='{{data.name}}'>
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Employee Salary</label>
+            <input required type="number" class="form-control" name="Salary" id="Salary" placeholder="8000 eg"
+                value={{data.Salary}}>
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Employee Dsg</label>
+            <input required type="text" class="form-control" name="Dsg" id="Dsg" placeholder="Manager eg"
+                value='{{data.Dsg}}'>
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Employee City</label>
+            <input required type="text" class="form-control" name="City" id="City" placeholder="Delhi eg"
+                value='{{data.City}}'>
+        </div>
+        <div class="mb-2">
+            <label class="form-label">Employee State</label>
+            <input required type="text" class="form-control" name="State" id="State" placeholder="8000eg"
+                value='{{data.State}}'>
+        </div>
+
+        <button type="submit" class="btn mybtn bgcol text-light text-center mt-2 w-100">Add</button>
+    </form>
+</div>
+{{>footer}}

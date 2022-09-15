@@ -1,0 +1,19 @@
+.bgcol{
+    background-color: rgb(207, 61, 86);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.mybtn:hover{
+   background-color: rgb(190, 69, 90)!important;
+}
