@@ -1,5 +1,8 @@
 const express = require("express")
 
+const Dotenv = require("dotenv")
+Dotenv.config()
+
 const BodyParser = require("body-parser")
 const encoder = BodyParser.urlencoded()
 
@@ -104,6 +107,7 @@ app.post("/search", encoder, async (req, res) => {
     }
 })
 
-app.listen(7575, () => {
+const PORT = process.env.PORT || 7575
+app.listen(PORT, () => {
     console.log("server running at 7575 port");
 })
